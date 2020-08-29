@@ -1,0 +1,64 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 50%;
+    position: relative;
+    background: #fff;
+    margin: 280px auto;
+    box-sizing: border-box;
+    padding: 20px 40px;
+    border-radius: 4px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
+}
+.loadingBar{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 10px;
+    background: #f1f1f1;
+    box-shadow: inset 0 0 tpx rgba(0, 0, 0, .2);
+    overflow: hidden;
+    border-radius: 4px;
+}
+.loadingBar::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-radius: 4px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
+    animation: loading infinite 5s;
+}
+@keyframes loading {
+    0%{
+        width: 0%;
+        background: yellow;
+    }
+    20%{
+        width: 20%;
+        background: violet;
+    }
+    40%{
+        width: 40%;
+        background: skyblue;
+    }
+    60%{
+        width: 60%;
+        background: #00f;
+    }
+    80%{
+        width: 80%;
+        background: purple;
+    }
+    90%{
+        width: 90%;
+        background: red;
+    }
+    100%{
+        width: 100%;
+        background: green;
+    }
+}
